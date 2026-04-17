@@ -1,0 +1,22 @@
+﻿@page "/"
+@using EcoMonitor.Components
+@rendermode InteractiveServer
+
+<h1 style="text-align:center;">🌍 EcoMonitor</h1>
+
+ <p style="text-align:center; font-size:18px;">
+        Transformando pequenas ações em grande impacto ambiental.
+    </p>
+
+<div style="
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+">
+
+    <EcoStatus Titulo="Reciclagem de Plástico" Peso="1" />
+    <EcoStatus Titulo="Descarte de Eletrônicos" Peso="5" />
+    <EcoStatus Titulo="Plantio de Árvores" Peso="10" />
+
+</div>

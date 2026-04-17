@@ -1,0 +1,68 @@
+@rendermode InteractiveServer
+@using Microsoft.AspNetCore.Components
+
+<div style="
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    width: 250px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    margin: 10px;
+">
+
+    <h3>@Titulo</h3>
+
+    <p>Pontos por ação: @Peso</p>
+
+    <p style="color:@CorTexto; font-size:18px;">
+        Total acumulado: @total
+    </p>
+
+    <button @onclick="Adicionar" style="
+        background-color: green;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    ">
+        Registrar Atividade
+    </button>
+
+    <!-- Barra -->
+    <div style="background-color: #ddd; height: 20px; margin-top:10px; border-radius:5px;">
+        <div style="
+            background-color: green;
+            height: 100%;
+            width:@(Math.Min(total, 100))%;
+            border-radius:5px;
+        ">
+        </div>
+    </div>
+
+    <!-- Mensagem -->
+    @if (total >= 100)
+    {
+        <p style="color:green; font-weight:bold; margin-top:10px;">
+            🌱Meta Batida! Você é um Herói do Planeta!
+        </p>
+    }
+
+</div>
+
+@code {
+    [Parameter]
+    public string Titulo { get; set; }
+
+    [Parameter]
+    public int Peso { get; set; }
+
+    private int total = 0;
+
+    private string CorTexto => total >= 50 ? "green" : "black";
+
+    void Adicionar()
+    {
+        total += Peso;
+    }
+}
