@@ -17,9 +17,27 @@ Curso: análise e desenvolvimento de sistemas
 ---
 
 ##  Como executar
-usando o seguinte comando:
+usando o seguinte comando
+
+### Como executar
+
+1. Entre no terminal
+
+2. Acesse a pasta do projeto
+
+cd documents
+
+3. Entre na pasta da aplicação:
+
+cd ecomonitor
+
+4. Execute o projeto:
 
 dotnet run --launch-profile https
+
+5. Abra no navegador:
+
+https://localhost:5001
 
 
 ## Screenshot da Aplicação
