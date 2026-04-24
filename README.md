@@ -22,6 +22,10 @@ usando o seguinte comando:
 dotnet run --launch-profile https
 
 
+## Screenshot da Aplicação
+
+![Screenshot](./screeshot.jpeg)
+
 
 ## Explicação Técnica
 
